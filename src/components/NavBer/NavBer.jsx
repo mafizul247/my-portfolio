@@ -1,16 +1,18 @@
 import React from 'react';
 import img1 from './../../assets/img1.jpg'
+import { Link } from 'react-scroll';
 
 const NavBer = () => {
     const navItems = <>
-        <li><a href='#home'>Home</a></li>
-        <li><a href='#about'>About</a></li>
-        <li><a href='#portfolio'>Portfolio</a></li>
+        {/* <li><a href='#home'>Home</a></li> */}
+        <li><Link to='home' activeClass='active' smooth={true} spy={true} duration={2500} >Home</Link></li>
+        <li><Link to='about' activeClass='active' smooth={true} spy={true} duration={2500} >About</Link></li>
+        <li><Link to='portfolio' activeClass='active' smooth={true} spy={true} duration={2500} >Portfolio</Link></li>
     </>
     return (
         <div>
             {/* className="navbar bg-gray-700 fixed max-w-7xl z-20 text-white opacity-75"  */}
-            <div className="navbar bg-base-200 fixed max-w-7xl z-20">
+            <div className="navbar bg-base-200 fixed max-w-7xl z-20 lg:px-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,7 +22,7 @@ const NavBer = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Link to='home' smooth={true} spy={true} duration={2500} className="btn btn-ghost text-xl font-bold text-gray-600">Portfolio</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -28,7 +30,10 @@ const NavBer = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <img className='w-12 h-12 rounded-full border-2 border-white' src={img1} alt="profile" />
+                    <ul className="menu menu-horizontal px-1">
+                    <li><Link to='hired' activeClass='active' smooth={true} spy={true} duration={2500} >Get Hired</Link></li>
+                    </ul>
+                    {/* <img className='w-12 h-12 rounded-full border-2 border-white ml-3' src={img1} alt="profile" /> */}
                 </div>
             </div>
         </div>
