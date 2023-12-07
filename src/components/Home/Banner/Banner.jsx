@@ -6,6 +6,8 @@ import image from './../../../assets/images/john4.png'
 import github from './../../../assets/icons/github.png'
 import linkedin from './../../../assets/icons/linkedin.png'
 import facebook from './../../../assets/icons/facebook.png'
+import email from './../../../assets/icons/red-email.jpg'
+import phone from './../../../assets/icons/phone.png'
 
 const Banner = () => {
 
@@ -20,10 +22,12 @@ const Banner = () => {
                     <button className="btn btn-success" ><a className='flex gap-2' href={resume} download>Download Resume <FaDownload /></a></button>
                     <button className="btn btn-outline btn-success">Contact Me</button>
                 </div>
-                <div className='mt-4'>
+                <div className='mt-4 flex gap-4'>
                     <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={github} alt='Github' /></a>
                     <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={linkedin} alt='LinkeDin' /></a>
                     <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={facebook} alt='Facebook' /></a>
+                    <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={email} alt='Email' /></a>
+                    <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={phone} alt='Phone' /></a>
                 </div>
             </div>
             <div className='mt-16 md:mt-0'>
