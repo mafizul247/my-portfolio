@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from './../../assets/img1.jpg'
+import img1 from './../../assets/images/img1.jpg'
 import { Link } from 'react-scroll';
 
 const NavBer = () => {
@@ -12,7 +12,7 @@ const NavBer = () => {
     return (
         <div>
             {/* className="navbar bg-gray-700 fixed max-w-7xl z-20 text-white opacity-75"  */}
-            <div className="navbar bg-base-200 fixed max-w-7xl z-20 lg:px-6">
+            <div className="navbar bg-base-200 fixed z-20 lg:px-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,7 +22,7 @@ const NavBer = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <Link to='home' smooth={true} spy={true} duration={2500} className="btn btn-ghost text-xl font-bold text-gray-600">Portfolio</Link>
+                    <button className='btn btn-outline text-xl font-bold'><Link to='home' smooth={true} spy={true} duration={2500} >Portfolio</Link></button>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -30,9 +30,7 @@ const NavBer = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <ul className="menu menu-horizontal px-1">
-                    <li><Link to='hired' activeClass='active' smooth={true} spy={true} duration={2500} >Get Hired</Link></li>
-                    </ul>
+                    <button className='btn btn-outline'><Link to='hired' activeClass='active' smooth={true} spy={true} duration={2500} >Get Hired</Link></button>
                     {/* <img className='w-12 h-12 rounded-full border-2 border-white ml-3' src={img1} alt="profile" /> */}
                 </div>
             </div>

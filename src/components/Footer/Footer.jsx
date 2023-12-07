@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import img from './../../assets/img1.jpg'
+import img from './../../assets/images/img1.jpg'
 
 const Footer = () => {
     return (
@@ -10,7 +10,7 @@ const Footer = () => {
                     {/* <img className='h-12 w-12 rounded-md' src={img} alt="Logo" /> */}
                     <p className='text-xl font-bold'>Mafizul Islam John</p>
                     <address>
-                        House: 29/22, Tajmohal Road, <br />
+                        29/22, Tajmohal Road, <br />
                         Block-C  Mohammadpur, <br />
                         Dhaka, Bangladesh
                     </address>
@@ -32,8 +32,8 @@ const Footer = () => {
                 </nav>
             </footer>
 
-            <div className='p-4 bg-base-300 text-base-content'>
-                <p className='text-center'>Copyright &copy; {new Date().getFullYear()} All Rigth Reserved By Mafizul Islam</p>
+            <div className='bg-gray-800 pb-0'>
+                <p className='text-center text-white pt-4'>Copyright &copy; {new Date().getFullYear()} All Rigth Reserved By <a href="#">Mafizul Islam</a></p>
             </div>
         </>
     );
