@@ -12,9 +12,9 @@ import phone from './../../../assets/icons/phone.png'
 const Banner = () => {
 
     return (
-        <div id='home' className='pt-32 py-12 mx-4 md:mx-12 grid gric-cols-1 md:grid-cols-2 gap-12 items-center'>
-            <div className='text-gray-100'>
-                <h1 className='text-5xl font-semibold'>Hi, I'm </h1>
+        <div id='home' className='pt-32 py-12 mx-4 md:mx-16 grid gric-cols-1 md:grid-cols-2 gap-12 items-center bg-slate-100 px-4 md:px-12 shadow-lg'>
+            <div className='text-gray-800'>
+                <h1 className='text-5xl font-bold'>Hi, I'm </h1>
                 <h1 className='text-6xl font-bold my-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-600 '>Mafizul Islam John</h1>
                 <h1 className='text-3xl text-red-500 font-bold my-3'>I am Front-End Developer</h1>
                 <p className='text-xl font-semibold text-justify'>Self-taught programmer with proficiency in the MERN stack, solid understanding of HTM5, JavaScript, React Js and CSS, Bootstrap Tailwind. Committed to continuous learning and staying updated with industry trends. Skilled in creating responsive user interfaces and building RESTful APIs.</p>
@@ -23,15 +23,15 @@ const Banner = () => {
                     <button className="btn btn-outline btn-success">Contact Me</button>
                 </div>
                 <div className='mt-4 flex gap-4'>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={github} alt='Github' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={linkedin} alt='LinkeDin' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={facebook} alt='Facebook' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={email} alt='Email' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-300 p-2 rounded-full' src={phone} alt='Phone' /></a>
+                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full' src={github} alt='Github' /></a>
+                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full' src={linkedin} alt='LinkeDin' /></a>
+                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full' src={facebook} alt='Facebook' /></a>
+                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full' src={email} alt='Email' /></a>
+                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full' src={phone} alt='Phone' /></a>
                 </div>
             </div>
-            <div className='mt-16 md:mt-0'>
-                <img className='md:w-3/4 md:mx-auto rounded-full' src={image} alt="John" />
+            <div >
+                <img className='lg:w-3/4 md:mx-auto rounded-full' src={image} alt="John" />
             </div>
         </div>
     );

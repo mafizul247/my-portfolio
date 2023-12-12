@@ -32,8 +32,8 @@ const Footer = () => {
                 </nav>
             </footer>
 
-            <div className='bg-gray-800 pb-0'>
-                <p className='text-center text-white pt-4'>Copyright &copy; {new Date().getFullYear()} All Rigth Reserved By <a href="#">Mafizul Islam</a></p>
+            <div className='bg-gray-200 pt-4'>
+                <p className='text-center text-gray-900'>Copyright &copy; {new Date().getFullYear()} All Rigth Reserved By <a href="#">Mafizul Islam</a></p>
             </div>
         </>
     );

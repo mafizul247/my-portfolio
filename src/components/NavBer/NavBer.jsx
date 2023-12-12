@@ -12,7 +12,7 @@ const NavBer = () => {
     return (
         <div>
             {/* className="navbar bg-gray-700 fixed max-w-7xl z-20 text-white opacity-75"  */}
-            <div className="navbar bg-base-200 fixed z-20 lg:px-6">
+            <div className="navbar bg-base-200 fixed z-20 lg:px-6 max-w-screen-2xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
