@@ -7,7 +7,9 @@ const NavBer = () => {
         {/* <li><a href='#home'>Home</a></li> */}
         <li><Link to='home' activeClass='active' smooth={true} spy={true} duration={2500} >Home</Link></li>
         <li><Link to='about' activeClass='active' smooth={true} spy={true} duration={2500} >About</Link></li>
-        <li><Link to='portfolio' activeClass='active' smooth={true} spy={true} duration={2500} >Portfolio</Link></li>
+        <li><Link to='skill' activeClass='active' smooth={true} spy={true} duration={2500} >Skill</Link></li>
+        <li><Link to='project' activeClass='active' smooth={true} spy={true} duration={2500} >Project</Link></li>
+        <li><Link to='contact' activeClass='active' smooth={true} spy={true} duration={2500} >Contact</Link></li>
     </>
     return (
         <div>
