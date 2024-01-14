@@ -8,6 +8,7 @@ import facebook from './../../../assets/icons/facebook.png'
 import email from './../../../assets/icons/red-email.jpg'
 import phone from './../../../assets/icons/phone.png'
 import image from './../../../assets/images/john2.png'
+import Social from '../../Social/Social';
 
 const About = () => {
     return (
@@ -24,13 +25,7 @@ const About = () => {
                     <button className="btn btn-success" ><a className='flex gap-2' href={resume} download>Download Resume <FaDownload /></a></button>
                     <button className="btn btn-outline btn-success">Projects</button>
                 </div>
-                <div className='mt-4 flex gap-4'>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={github} alt='Github' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={linkedin} alt='LinkeDin' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={facebook} alt='Facebook' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={email} alt='Email' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={phone} alt='Phone' /></a>
-                </div>
+                <Social />
             </div>
         </div>
     );

@@ -3,11 +3,8 @@ import { FaDownload } from 'react-icons/fa'
 
 import resume from './../../../assets/resume/CV_of_Mafizul_Islam_John.pdf'
 import image from './../../../assets/images/john4.png'
-import github from './../../../assets/icons/github.png'
-import linkedin from './../../../assets/icons/linkedin.png'
-import facebook from './../../../assets/icons/facebook.png'
-import email from './../../../assets/icons/red-email.jpg'
-import phone from './../../../assets/icons/phone.png'
+import Social from '../../Social/Social';
+
 
 const Banner = () => {
 
@@ -22,13 +19,7 @@ const Banner = () => {
                     <button className="btn btn-success" ><a className='flex gap-2' href={resume} download>Download Resume <FaDownload /></a></button>
                     <button className="btn btn-outline btn-success">Contact Me</button>
                 </div>
-                <div className='mt-4 flex gap-4'>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={github} alt='Github' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={linkedin} alt='LinkeDin' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={facebook} alt='Facebook' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={email} alt='Email' /></a>
-                    <a href=""><img className='h-12 w-12 border-2 border-gray-700 p-2 rounded-full hover:bg-yellow-500 hover:border-yellow-600' src={phone} alt='Phone' /></a>
-                </div>
+                <Social />
             </div>
             <div >
                 <img className='lg:w-3/4 md:mx-auto rounded-full' src={image} alt="John" />
