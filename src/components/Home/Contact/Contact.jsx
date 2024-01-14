@@ -7,6 +7,7 @@ import facebook from './../../../assets/icons/facebook.png'
 import email from './../../../assets/icons/red-email.jpg'
 import phone from './../../../assets/icons/phone.png'
 import whatsApp from './../../../assets/icons/WhatsApp_icon.png.webp'
+import Swal from 'sweetalert2';
 
 const Contact = () => {
     const form = useRef();
@@ -14,12 +15,31 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        Swal.fire({
+            title: "Are you sure want to sent message?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                emailjs.sendForm('service_g3pa9vb', 'template_tqqgi2l', form.current, 'HzZEPHVxSvxM5lBZa')
+                    .then((result) => {
+                        // console.log(result.text);
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: "Your message has been sent",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        e.target.reset();
+                    }, (error) => {
+                        console.log(error.text);
+                    });
+            }
+        });
     };
 
     return (
@@ -30,11 +50,11 @@ const Contact = () => {
                     <h2 className='text-3xl font-semibold mb-4'>Send Message Me</h2>
                     <div>
                         <form ref={form} onSubmit={sendEmail}>
-                            <input type="text" name='name' placeholder="Your Name" className="input input-bordered input-primary w-full mb-4" required />
-                            <input type="email" name='email' placeholder="Your Email" className="input input-bordered input-primary w-full mb-4" required />
-                            <input type="text" name='phone' placeholder="Your Phone" className="input input-bordered input-primary w-full mb-4" required />
-                            <input type="text" name='subject' placeholder="Subject" className="input input-bordered input-primary w-full mb-4" required />
-                            <textarea name='message' className="textarea textarea-primary w-full mb-4" placeholder="Details Message" required></textarea>
+                            <input type="text" name='name' placeholder="Your Name" className="input input-bordered input-primary text-black w-full mb-4" required />
+                            <input type="email" name='email' placeholder="Your Email" className="input input-bordered input-primary text-black w-full mb-4" required />
+                            <input type="text" name='phone' placeholder="Your Phone" className="input input-bordered input-primary text-black w-full mb-4" required />
+                            <input type="text" name='subject' placeholder="Subject" className="input input-bordered input-primary text-black w-full mb-4" required />
+                            <textarea name='message' className="textarea textarea-primary text-black w-full mb-4" placeholder="Details Message" required></textarea>
                             <div className='text-center'>
                                 <input className='btn' type="submit" value="Send Message" />
                             </div>
